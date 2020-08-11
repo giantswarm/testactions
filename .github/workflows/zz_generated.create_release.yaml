@@ -114,7 +114,7 @@ jobs:
   update_project_go:
     name: Update project.go
     runs-on: ubuntu-18.04
-    if: ${{ needs.gather_facts.outputs.version != '' && needs.gather_facts.outputs.project_go_path != ''  && need.gather_facts.ref_version.outputs.refversion != 'true' }}
+    if: ${{ needs.gather_facts.outputs.version != '' && needs.gather_facts.outputs.project_go_path != ''  && needs.gather_facts.ref_version.outputs.refversion != 'true' }}
     needs:
       - gather_facts
       - install_semver
