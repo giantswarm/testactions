@@ -69,6 +69,7 @@ jobs:
           version=$(echo $title | cut -d ' ' -f 2)
           version="${version#v}" # Strip "v" prefix.
           if [[ "${version}" =~ ^[0-9]+.[0-9]+.[0-9]+-[0-9]+$ ]]; then
+            echo "refversion=true"
             echo ::set-output name=refversion::true
           fi
   install_semver:
